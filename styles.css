@@ -47,6 +47,16 @@ section.visible {
     transform: translateY(0);
 }
 
+.scroll-section:nth-child(2n+1).visible {
+    transform: translateX(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-section:nth-child(2n).visible {
+    transform: translateX(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 #home {
     background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     color: white;
@@ -129,4 +139,12 @@ footer {
     #home .overlay {
         padding: 1em;
     }
+}
+
+.scroll-section:nth-child(2n+1) {
+    transform: translateX(-100%);
+}
+
+.scroll-section:nth-child(2n) {
+    transform: translateX(100%);
 }
