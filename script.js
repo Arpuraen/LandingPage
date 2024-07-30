@@ -1,27 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.scroll-section');
 
-    function activateSection() {
-        const hash = window.location.hash || '#home';
-        sections.forEach(section => {
-            if (`#${section.id}` === hash) {
-                section.classList.add('active');
-            } else {
-                section.classList.remove('active');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    }
+    }, observerOptions);
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.history.pushState({}, '', link.getAttribute('href'));
-            activateSection();
-        });
+    sections.forEach(section => {
+        observer.observe(section);
     });
-
-    window.addEventListener('popstate', activateSection);
-
-    activateSection();
 });
