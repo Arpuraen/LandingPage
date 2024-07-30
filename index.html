@@ -1,73 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Argi Putra Zulkarnaen - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang Saya</a></li>
-                <li><a href="#experience">Pengalaman</a></li>
-                <li><a href="#skills">Keahlian</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home" class="scroll-section">
-        <div class="overlay">
-            <h1>Argi Putra Zulkarnaen</h1>
-            <p>Mahasiswa S1 Informatika | Telkom University</p>
-        </div>
-    </section>
-    <section id="about" class="scroll-section">
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah mahasiswa S1 Informatika di Telkom University dengan minat besar dalam pengembangan web dan analisis data. Saya memiliki pengalaman magang di Telkomsel sebagai Analis Data, di mana saya mengembangkan bot Telegram dan otomatisasi input data menggunakan Google Apps Script.</p>
-    </section>
-    <section id="experience" class="scroll-section">
-        <h2>Pengalaman</h2>
-        <div class="experience-container">
-            <div class="experience">
-                <h3>Telkomsel - Analis Data</h3>
-                <p>Magang di Telkomsel Branch Soreang dalam unit Household and APC Consumer Operations. Mengembangkan bot Telegram menggunakan JavaScript pada Google Apps Script dan otomatisasi input data di Google Sheets.</p>
-                <span>Jul 2024 - Aug 2024</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Handai Coffee</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo"><img src="assets/img/logo.png" width="65px"></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Beranda</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Tentang</a></li>
+                        <!--<li class="nav__item"><a href="#services" class="nav__link">Services</a></li>-->
+                        <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Kontak</a></li>
+
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">Handai Coffee</h1>
+                        <h2 class="home__subtitle">#pelengkapaktivitas tuk jadi<br> #pemicuproduktivitas mu!</h2>
+                        <a href="#menu" class="button">Lihat Menu</a>
+                    </div>
+    
+                    <img src="assets/img/home.png" alt="" class="home__img">
+                </div>
+            </section>
+            
+            <!--========== ABOUT ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">Tentang</span>
+                        <h2 class="section-title about__initial">Handai Coffee</h2>
+                        <p align="justify" class="about__description">HandaiCoffee adalah brand kopi kekinian yang saat ini 
+                        berfokus di kopi dan non kopi botolan dan memiliki target market mahasiswa. Harapannya Handaicoffee 
+                        memiliki positioning sehat dan ramah lingkungan. HandaiCoffee memiliki impian untuk bisa tumbuh besar 
+                        dan dapat bersaing di industri minuman kopi di Indonesia dalam ruang lingkup universitas.</p>
+                        <!--<a href="#" class="button">Explore history</a> box-shadow: 0 2px 4px rgba(3,74,40,.15);-->
+                    </div>
+
+                    <img src="assets/img/about.png" alt="" class="about__img">
+                </div>
+            </section>
+
+            <!--========== MENU ==========-->
+            <section class="menu section bd-container" id="menu">
+                <span class="section-subtitle">Menu</span>
+                <h2 class="section-title">Handai Coffee</h2>
+
+                <div class="menu__container bd-grid">
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/KOPI SUSU.png" alt="" class="menu__img">
+                        <h3 class="menu__name">KOPI SUSU GULA AREN</h3>
+                        <span class="menu__detail">Espresso ditambah susu dan krimer premium pakai gula aren</span>
+                         <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/SPARKLIME.png" alt="" class="menu__img">
+                        <h3 class="menu__name">SPARKLIME CAFFEINE</h3>
+                        <span class="menu__detail">Kopi dengan tambahan rasa segar dari buah lime</span>
+                         <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                         <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/RED VELVET.png" alt="" class="menu__img">
+                        <h3 class="menu__name">RED VELVET LATTE</h3>
+                        <span class="menu__detail">Minuman rasa Red Velvet</span>
+                        <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+            
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/SUSU KURMA.png" alt="" class="menu__img">
+                        <h3 class="menu__name">SUSU KURMA</h3>
+                        <span class="menu__detail">Kurma, susu, madu, garam Himalaya, dan chia seeds mexico</span>
+                        <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/CHOCO.png" alt="" class="menu__img">
+                        <h3 class="menu__name">CHOCO LATTE</h3>
+                        <span class="menu__detail">Minuman rasa Coklat</span>
+                        <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/MATCHA.png" alt="" class="menu__img">
+                        <h3 class="menu__name">MATCHA LATTE</h3>
+                        <span class="menu__detail">Minuman rasa Matcha</span>
+                        <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/TARO LATTE.png" alt="" class="menu__img">
+                        <h3 class="menu__name">TARO LATTE</h3>
+                        <span class="menu__detail">Minuman rasa taro</span>
+                        <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/menu-img/VANILA REGAL.png" alt="" class="menu__img">
+                        <h3 class="menu__name">VANILLA REGAL</h3>
+                        <span class="menu__detail">Minuman rasa Vanila dan Regal</span>
+                        <!-- <span class="button menu__button">13k | 22k | 39k</span> -->
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== CONTACT US ==========-->
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                    <div class="contact__data">
+                        <span class="section-subtitle contact__initial">Contact Us</span>
+                        <h2 class="section-title contact__initial">Hubungi Kami!</h2>
+                        <p align="justify" class="contact__description">Tertarik pada produk kami? <br> Hubungi kami pada kontak dibawah ini:</p>
+
+                    <div class="contact__button">
+                        <a href="https://wa.me/message/FFE24T55ARKTO1" target="__blank" class="button"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                        <a href="https://neartail.com/public/116923729925262736422/home/form/1FAIpQLSc53s-ibn3mleA78gV9ZAp17XqSgN06dQfXQBvAOICmLqCdsw" 
+                        target="__blank" class="button"><i class='bx bx-cart-alt'></i> Pesan Sekarang</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a class="footer__logo"><img src="assets/img/logo.png" width="65px"></a>
+                    <span class="footer__description">#pelengkapaktivitas tuk jadi #pemicuproduktivitas mu!</span>
+                    <div>
+                        <a href="https://www.instagram.com/handaicoffee/" target="__blank" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <!--<a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>-->
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Informasi</h3>
+                    <ul>
+                        <li><a href="#menu" class="footer__link">Harga menu</a></li>
+                        <li><a href="#about" class="footer__link">Tentang</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Alamat</h3>
+                    <ul>
+                        <li>📍Cicalengka, Bandung </li>
+                        <li><a href="mailto:handaikopi@gmail.com">handaikopi@gmail.com</li>
+                    </ul>
+                </div>
             </div>
-            <!-- Tambahkan pengalaman lain di sini -->
-        </div>
-    </section>
-    <section id="skills" class="scroll-section">
-        <h2>Keahlian</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <i class="fas fa-code"></i>
-                <h3>Pengembangan Web</h3>
-                <p>HTML, CSS, JavaScript</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-database"></i>
-                <h3>Analisis Data</h3>
-                <p>Google Sheets, Google Apps Script</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-chart-bar"></i>
-                <h3>Visualisasi Data</h3>
-                <p>Excel, Google Sheets</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="scroll-section">
-        <h2>Kontak</h2>
-        <p>Hubungi saya di <a href="mailto:argiputra@example.com">argiputra@example.com</a> untuk informasi lebih lanjut.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Argi Putra Zulkarnaen. Hak cipta dilindungi undang-undang.</p>
-    </footer>
-    <script src="scripts.js"></script>
-</body>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
